@@ -15,13 +15,13 @@ console.log("DB Server Structure Model");
 sqlReader = {
     ...sql,
     host: 'localhost',
-    timezone: '+05:30'
+    timezone: '+00:00'
 };
 
 sqlWriter = {
     ...sql,
     host: 'localhost',
-    timezone: '+05:30'
+    timezone: '+00:00'
 };
 
 var [dbReader, dbWriter] = [{
