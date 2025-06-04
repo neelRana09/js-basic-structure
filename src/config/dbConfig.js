@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const { appConfig } = require('./appConfig');
 var path = require('path');

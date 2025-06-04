@@ -3,7 +3,6 @@
 /**
  * Module dependencies.
  */
-require('dotenv').config();
 var { app } = require('./src/app');
 var { appConfig } = require('./src/config/appConfig');
 var debug = require('debug')('test:server');
