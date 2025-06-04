@@ -1,6 +1,5 @@
 const { Sequelize } = require('sequelize');
 const { appConfig } = require('./appConfig');
-var path = require('path');
 
 const sql = {
     database: appConfig.db_name,
@@ -48,7 +47,7 @@ var DbInstance = [{
 
 DbInstance.forEach(element => {
     // Model Map
-    element.name['users'] = require(path.join('../models', './userModel'))(element.name['sequelize'], Sequelize);
+    element.name['users'] = require('../models/userModel')(element.name['sequelize'], Sequelize);
 
     // Model Association
     Object.keys(element.name).forEach(function (modelName) {
