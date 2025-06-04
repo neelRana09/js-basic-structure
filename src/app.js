@@ -4,6 +4,7 @@ const webRouter = require("./routes/webRoute");
 const path = require("path");
 const app = express();
 
+// View Engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
@@ -15,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/user", userRouter);
 app.use("/api", webRouter);
 
-// error handler
+// Error Handler
 app.use(function (err, req, res, next) {
     if (err.status == 404) {
         return res.status(404).json({ message: err.message });
