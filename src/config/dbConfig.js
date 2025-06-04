@@ -59,7 +59,7 @@ DbInstance.forEach(element => {
 });
 
 
-dbReader.Sequelize = Sequelize;
-dbWriter.Sequelize = Sequelize;
+dbReader.sequelize = Sequelize;
+dbWriter.sequelize = Sequelize;
 
 module.exports = { dbReader, dbWriter };
