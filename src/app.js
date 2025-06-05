@@ -1,6 +1,8 @@
+// Importing Modules
 const express = require("express");
 const userRouter = require("./routes/userRoute");
 const webRouter = require("./routes/webRoute");
+const authRoute = require("./routes/authRoute");
 const path = require("path");
 const app = express();
 
@@ -15,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use("/api/user", userRouter);
 app.use("/api", webRouter);
+app.use("/api/auth", authRoute);
 
 // Error Handler
 app.use(function (err, req, res, next) {
@@ -24,4 +27,5 @@ app.use(function (err, req, res, next) {
 
     return res.status(err.status || 500).json({ message: err.message });
 });
+
 module.exports = { app };

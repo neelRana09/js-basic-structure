@@ -1,0 +1,673 @@
+{
+	"info": {
+		"_postman_id": "46b51c0f-b3e2-425c-9ab9-38b1dce00181",
+		"name": "Js Basic Structure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37316308",
+		"_collection_link": "https://planetary-sunset-560345.postman.co/workspace/chat_application_backend~12594691-44ec-49c6-a4d5-1e0f2322ceb9/collection/37316308-46b51c0f-b3e2-425c-9ab9-38b1dce00181?action=share&source=collection_link&creator=37316308"
+	},
+	"item": [
+		{
+			"name": "Web Route Api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Web Route Api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-71eaCGSr06fuAxEDIPsOfLwOlRs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 05:34:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <title>\n        Web Route\n    </title>\n    </head>\n    <body>\n        <h1>\n        Welcome to Home Page\n    </h1>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Tes1\",\n    \"last_name\": \"test1\",\n    \"email\": \"email123@yopmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/saveuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"saveuser"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Tes1\",\n    \"last_name\": \"test1\",\n    \"email\": \"email123@yopmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/saveuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"saveuser"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "226"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e2-xKwNRKF76V7y/+SG5AaBLvewuC0\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 05:39:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"user_id\": \"454da6bc-1954-4dd8-abab-1d5e864a335e\",\n        \"first_name\": \"Tes1\",\n        \"last_name\": \"test1\",\n        \"email\": \"email123@yopmail.com\",\n        \"password\": \"U2FsdGVkX18wZijXvdj9V+JGpjz/Uw9PFnmM14KGg74=\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDU0ZGE2YmMtMTk1NC00ZGQ4LWFiYWItMWQ1ZTg2NGEzMzVlIiwiZW1haWwiOiJlbWFpbDFAeW9wbWFpbC5jb20iLCJpYXQiOjE3NDkxMDUxNzN9.5dIQqqMUUUibt5Lr5bMHkQU8-wELjcgMlgQhH0ptH9Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Mihir\",\n    \"last_name\": \"Prajapati\",\n    \"email\": \"email@yopmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/updateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"updateUser"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"454da6bc-1954-4dd8-abab-1d5e864a335e\",\n    \"first_name\": \"Tes1\",\n    \"last_name\": \"test1\",\n    \"email\": \"email1@yopmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33-ZBaN+EeY79RhKttgZ6dz2GddYAg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 05:40:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDU0ZGE2YmMtMTk1NC00ZGQ4LWFiYWItMWQ1ZTg2NGEzMzVlIiwiZW1haWwiOiJlbWFpbDFAeW9wbWFpbC5jb20iLCJpYXQiOjE3NDkxMDUxNzN9.5dIQqqMUUUibt5Lr5bMHkQU8-wELjcgMlgQhH0ptH9Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/user/deleteUser/454da6bc-1954-4dd8-abab-1d5e864a335e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"deleteUser",
+						"454da6bc-1954-4dd8-abab-1d5e864a335e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete User",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/deleteUser/01585d12-3c94-45b8-92b1-cd46600c60dc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"deleteUser",
+								"01585d12-3c94-45b8-92b1-cd46600c60dc"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33-ZBaN+EeY79RhKttgZ6dz2GddYAg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 05:42:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDU0ZGE2YmMtMTk1NC00ZGQ4LWFiYWItMWQ1ZTg2NGEzMzVlIiwiZW1haWwiOiJlbWFpbDFAeW9wbWFpbC5jb20iLCJpYXQiOjE3NDkxMDUxNzN9.5dIQqqMUUUibt5Lr5bMHkQU8-wELjcgMlgQhH0ptH9Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"454da6bc-1954-4dd8-abab-1d5e864a335e\",\n    \"first_name\": \"Tes1\",\n    \"last_name\": \"test1\",\n    \"email\": \"email1@yopmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/getUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"getUser"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"454da6bc-1954-4dd8-abab-1d5e864a335e\",\n    \"first_name\": \"Tes1\",\n    \"last_name\": \"test1\",\n    \"email\": \"email1@yopmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/getUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"getUser"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "444"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1bc-SEH6ccvPvw5D2H9SUbl5dvV1dFE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 06:33:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"user_id\": \"454da6bc-1954-4dd8-abab-1d5e864a335e\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDU0ZGE2YmMtMTk1NC00ZGQ4LWFiYWItMWQ1ZTg2NGEzMzVlIiwiZW1haWwiOiJlbWFpbDFAeW9wbWFpbC5jb20iLCJpYXQiOjE3NDkxMDUxNzN9.5dIQqqMUUUibt5Lr5bMHkQU8-wELjcgMlgQhH0ptH9Y\",\n        \"first_name\": \"Tes1\",\n        \"last_name\": \"test1\",\n        \"email\": \"email1@yopmail.com\",\n        \"password\": \"U2FsdGVkX18wZijXvdj9V+JGpjz/Uw9PFnmM14KGg74=\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"123456\",\n    \"email\": \"email1@yopmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"123456\",\n    \"email\": \"email1@yopmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d4-7+QJ/4l+uHBBSkCWWd2314XzwKg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 06:19:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsMUB5b3BtYWlsLmNvbSIsImlhdCI6MTc0OTEwNDM5NX0.zevhsnWDApmhBYPr_XAnmqvsRUqsaiSG14PJF4Pzops\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDU0ZGE2YmMtMTk1NC00ZGQ4LWFiYWItMWQ1ZTg2NGEzMzVlIiwiZW1haWwiOiJlbWFpbDFAeW9wbWFpbC5jb20iLCJpYXQiOjE3NDkxMDUxNzN9.5dIQqqMUUUibt5Lr5bMHkQU8-wELjcgMlgQhH0ptH9Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "logout",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-0+NclkJlnCQ17LnEpcW22rvyBe4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Jun 2025 06:36:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"message\": \"Logout successful\",\n    \"data\": null\n}"
+				}
+			]
+		}
+	]
+}
