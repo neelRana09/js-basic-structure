@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             unique: true,
         },
+        token: DataTypes.TEXT,
         first_name: DataTypes.STRING(60),
         last_name: DataTypes.STRING(60),
         email: DataTypes.STRING(60),
@@ -18,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
 
     User.associate = (models) => {
         // Define associations here if needed
+        // User.belongsTo(models.items, {
+        //     foreignKey: 'user_id',
+        //     targetKey: 'item_id'
+        // });
     };
 
     return User;
